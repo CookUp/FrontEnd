@@ -36,7 +36,7 @@ public class PostMessage {
 	}
 
 	public String toJson() {
-		return JsonSerializer.serialize(this);
+		return JsonSerializer.serializeKeepNull(this);
 	}
 
 	public static class FindParameters {

@@ -63,7 +63,7 @@
 ================================================== */
 	h1, h2, h3, h4, h5, h6 {
 		color: #181818;
-		font-family: 'Ubuntu', "Arial", sans-serif;
+		font-family: 'Ubuntu', sans-serif;
 		font-weight: normal; }
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 	h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px;}
@@ -94,9 +94,9 @@
 
 /* #Links
 ================================================== */
-	a, a:visited { color: #333; text-decoration: underline; outline: 0; }
+	a, a:visited { font-family: 'Ubuntu', sans-serif; color: #333; text-decoration: underline; outline: 0; font-size: 18px; }
 	a:hover, a:focus { color: #000; }
-	p a, p a:visited { line-height: inherit; }
+	p a, p a:visited { font-family: 'Ceviche One', cursive; line-height: inherit; }
 
 
 /* #Lists

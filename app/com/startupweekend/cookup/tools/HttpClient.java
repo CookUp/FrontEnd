@@ -20,7 +20,7 @@ import org.slf4j.LoggerFactory;
 public class HttpClient {
 	private static Logger logger = LoggerFactory.getLogger(HttpClient.class);
 
-	private static final String DOMAIN = "172.16.0.149";
+	private static final String DOMAIN = "localhost";
 	private static final int TIMEOUT_IN_SECS = 5;
 	private static final String DEFAULT_ENCODING = "utf8";
 	private static final int PORT = 8084;

@@ -52,10 +52,12 @@ public class JsonSerializer {
 
 	private static ObjectMapper constructMapper(boolean removeNulls) {
 		ObjectMapper mapper = new ObjectMapper();
+		mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES,
+				false);
+
 		if (removeNulls) {
-			mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+			mapper.setSerializationInclusion(Include.NON_NULL);
 		}
-		mapper.setSerializationInclusion(Include.NON_NULL);
 		return mapper;
 	}
 }

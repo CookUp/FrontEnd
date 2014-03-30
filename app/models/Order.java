@@ -1,6 +1,5 @@
 package models;
 
-import models.DomainEntity;
 
 
 public class Order extends DomainEntity {
@@ -9,6 +8,9 @@ public class Order extends DomainEntity {
 	private Integer buyer;
 	private Integer meal;
 	private Integer loation;
+	private String mealName = "fake meal ame";
+	private String cookName = "fake cook name";
+	private String fileName = "cook-dishes1.png";
 
 	public Order(Integer id, Integer cook, Integer buyer, Integer meal,
 			Integer loation) {
@@ -28,6 +30,16 @@ public class Order extends DomainEntity {
 
 	public Order() {
 		// TODO Auto-generated constructor stub
+	}
+
+
+
+	public String getFileName() {
+		return fileName;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
 	}
 
 	public Integer getId() {
@@ -68,6 +80,22 @@ public class Order extends DomainEntity {
 
 	public void setLoation(Integer loation) {
 		this.loation = loation;
+	}
+
+	public String getMealName() {
+		return mealName;
+	}
+
+	public void setMealName(String mealName) {
+		this.mealName = mealName;
+	}
+
+	public String getCookName() {
+		return cookName;
+	}
+
+	public void setCookName(String cookName) {
+		this.cookName = cookName;
 	}
 
 
