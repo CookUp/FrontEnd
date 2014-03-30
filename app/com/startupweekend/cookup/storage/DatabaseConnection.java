@@ -2,8 +2,9 @@ package com.startupweekend.cookup.storage;
 
 import java.util.List;
 
-import com.startupweekend.cookup.domain.Meal;
-import com.startupweekend.cookup.domain.Order;
+import models.Meal;
+import models.Order;
+
 import com.startupweekend.cookup.storage.PostMessage.FindParameters;
 import com.startupweekend.cookup.tools.HttpClient;
 import com.startupweekend.cookup.tools.JsonSerializer;

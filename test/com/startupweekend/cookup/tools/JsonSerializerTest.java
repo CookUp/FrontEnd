@@ -6,9 +6,9 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import org.junit.Test;
+import models.Meal;
 
-import com.startupweekend.cookup.domain.Meal;
+import org.junit.Test;
 
 public class JsonSerializerTest {
 

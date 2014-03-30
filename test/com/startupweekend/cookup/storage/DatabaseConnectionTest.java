@@ -9,10 +9,11 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import models.Meal;
+
 import org.junit.Test;
 import org.mockito.Matchers;
 
-import com.startupweekend.cookup.domain.Meal;
 import com.startupweekend.cookup.tools.HttpClient;
 
 public class DatabaseConnectionTest {

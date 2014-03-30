@@ -1,10 +1,9 @@
 package com.startupweekend.cookup.storage;
 
 import static com.startupweekend.cookup.test.utils.JsonAssert.assertJson;
+import models.DomainEntity;
 
 import org.junit.Test;
-
-import com.startupweekend.cookup.domain.DomainEntity;
 
 public class PostMessageTest {
 

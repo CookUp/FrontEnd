@@ -3,11 +3,12 @@ package com.startupweekend.cookup.storage;
 import java.util.Arrays;
 import java.util.List;
 
+import models.Meal;
+
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.startupweekend.cookup.domain.Meal;
 import com.startupweekend.cookup.tools.HttpClient;
 
 public class DatabaseConnectionIntegrationTest {

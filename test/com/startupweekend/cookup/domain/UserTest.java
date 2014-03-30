@@ -2,6 +2,8 @@ package com.startupweekend.cookup.domain;
 
 import static com.startupweekend.cookup.test.utils.JsonAssert.assertJson;
 import static org.junit.Assert.assertEquals;
+import models.DomainEntity;
+import models.User;
 
 import org.junit.Test;
 

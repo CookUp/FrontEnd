@@ -2,39 +2,46 @@
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
 <head>
 
-	<!-- Basic Page Needs
+<!-- Basic Page Needs
   ================================================== -->
-	<meta charset="utf-8">
-	<title>[COOKUP]</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
+<meta charset="utf-8">
+<title>[COOKUP]</title>
+<meta name="description" content="">
+<meta name="author" content="">
 
-	<!-- Mobile Specific Metas
+<!-- Mobile Specific Metas
   ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<!-- CSS
+<!-- CSS
   ================================================== -->
 
-	<link rel="stylesheet" href="@routes.Assets.at("stylesheets/base.css")">
-	<link rel="stylesheet" href="@routes.Assets.at("stylesheets/skeleton.css")">
-	<link rel="stylesheet" href="@routes.Assets.at("stylesheets/layout.css")">
+<link rel="stylesheet" href="@routes.Assets.at("stylesheets/base.css")">
+<link rel="stylesheet" href="@routes.Assets.at("stylesheets/skeleton.css")">
+<link rel="stylesheet" href="@routes.Assets.at("stylesheets/layout.css")">
 
-	<!--[if lt IE 9]>
+<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
-	<!-- Favicons
+<!-- Favicons
 	================================================== -->
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-	
-	<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|IM+Fell+Double+Pica:400,400italic' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72"
+	href="images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114"
+	href="images/apple-touch-icon-114x114.png">
+
+<link
+	href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|IM+Fell+Double+Pica:400,400italic'
+	rel='stylesheet' type='text/css'>
 
 </head>
 <body>
@@ -44,166 +51,167 @@
 	<!-- Primary Page Layout
 	================================================== -->
 
-<div class="container">
-    
-    <div class="eight columns" id="logo">
-        <h3>[COOKUP]</h3>
-    </div>
-     
-    <div id="nav" class="eight columns">
-        <ul>
-            <li><a href="index.html">Login</a></li>
-            <li><a href="about.html">Cook</a></li>
-            <li><a href="boutique.html">Order</a></li>
-            <li><a href="corporate.html">Language</a></li>
-        </ul>
-    </div>
+	<div class="container">
 
-</div>
-
-<div id="headerImage" class="container-100">
-	<div id="welcome" class="container">	
-		<div id="search" class="sixteen columns">
-        	<h4>Description Cook</h4>
-			<p>Some short introduction</p>
+		<div class="eight columns" id="logo">
+			<h3>[COOKUP]</h3>
 		</div>
+
+		<div id="nav" class="eight columns">
+			<ul>
+				<li><a href="index.html">Login</a></li>
+				<li><a href="about.html">Cook</a></li>
+				<li><a href="boutique.html">Order</a></li>
+				<li><a href="corporate.html">Language</a></li>
+			</ul>
+		</div>
+
 	</div>
-	<div class="container">	
-		<div class="four columns">
-        	<label for="selectList">Neighbourhood</label>
-				<select id="selectList">
+
+	<div id="headerImage" class="container-100">
+		<div id="welcome" class="container">
+			<div id="search" class="sixteen columns">
+				<h4>Description Cook</h4>
+				<p>Some short introduction</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="four columns">
+				<label for="selectList">Neighbourhood</label> <select
+					id="selectList" name="locationId">
 					<option value="Option 1">Option 1</option>
 					<option value="Option 2">Option 2</option>
 					<option value="Option 3">Option 3</option>
 				</select>
-		  </div>
-		  <div class="four columns">
-			  <label for="selectList">Cook</label>
-			  	<select id="selectList">
-				  	<option value="Option 1">Option 1</option>
-				  	<option value="Option 2">Option 2</option>
-				  	<option value="Option 3">Option 3</option>
-				  </select>
 			</div>
 			<div class="four columns">
-				<label for="selectList">Dish</label>
-				<select id="selectList">
+				<label for="selectList">Cook</label> <select id="selectList">
 					<option value="Option 1">Option 1</option>
 					<option value="Option 2">Option 2</option>
 					<option value="Option 3">Option 3</option>
-					</select>
+				</select>
 			</div>
+			<div class="four columns">
+				<label for="selectList">Dish</label> <select id="selectList">
+					<option value="Option 1">Option 1</option>
+					<option value="Option 2">Option 2</option>
+					<option value="Option 3">Option 3</option>
+				</select>
+			</div>
+			@helper.form(action = routes.Application.find("@locationId")) {
 			<div class="four columns">
 				<button type="submit">Submit Form</button>
 			</div>	
+			}
 		</div>
 	</div>
-</div>
+	</div>
 
-<div class="container">    
-    <div id="order-option" class="sixteen columns">
-        <a href="#">ORDER ?</a> I <a href="#">COOK ?</a>
-    </div>
-</div>    
-
-
-<div class="container">    
-    <div id="dish" class="four columns">
-        <img src="#"></img>
-        <h5>DISH 1</h5>
-        <p>Name cook</p>
-        <p>RATING</p>
-    </div>
-	<div id="dish" class="four columns">
-        <img src="#"></img>
-        <h5>DISH 2</h5>
-	    <p>Name cook</p>
-        <p>RATING</p>
-	</div>
-	<div id="dish" class="four columns">
-        <img src="#"></img>
-        <h5>DISH 3</h5>
-        <p>Name cook</p>
-        <p>RATING</p>
-    </div>
-	<div id="dish" class="four columns">
-         <img src="#"></img>
-       <h5>DISH 4</h5>
-	    <p>Name cook</p>
-        <p>RATING</p>
-	</div>
-</div>
-<div class="container">    
-    <div id="dish" class="four columns">
-        <img src="#"></img>
-        <h5>DISH 5</h5>
-        <p>Name cook</p>
-        <p>RATING</p>
-    </div>
-	<div id="dish" class="four columns">
-        <img src="#"></img>
-        <h5>DISH 6</h5>
-	    <p>Name cook</p>
-        <p>RATING</p>
-	</div>
-	<div id="dish" class="four columns">
-        <img src="#"></img>
-        <h5>DISH 7</h5>
-        <p>Name cook</p>
-    </div>
-	<div id="dish" class="four columns">
-        <img src="#"></img>
-        <h5>DISH 8</h5>
-	    <p>Name cook</p>
-        <p>RATING</p>
-	</div>
-</div>
-  
-<div class="container">    
-    <div id="feature" class="eight columns">
-    <img src="images/fast.jpg" alt="fast" width="220" height="113">
-        <h5>FEATURE 1</h5>
-        <p>Name cook</p>
-    </div>
-	<div id="feature" class="eight columns">
-        <img src="images/foundation.jpg" alt="foundation" width="220" height="113">
-        <h5>FEATURE 2</h5>
-	    <p>Name cook</p>
-	</div>
-</div>
-
-<div class="container">    
-    <div id="steps" class="one-third column">
-        <img src="#"></img>
-        <h5>STEP 1</h5>
-        <p>Explanation</p>
-    </div>
-    <div id="steps" class="one-third column">
-        <img src="#"></img>
-        <h5>STEP 2</h5>
-	    <p>Explanation</p>
-	</div>
-    <div id="steps" class="one-third column">
-        <img src="#"></img>
-        <h5>STEP 3</h5>
-        <p>Explanation</p>
-    </div>
-</div>
-
-<div id="map" class="container-100">
-		<div class="sixteen columns">    
-		<label for="regularInput">Regular Input</label>
-		<input type="text" id="regularInput" />
+	<div class="container">
+		<div id="order-option" class="sixteen columns">
+			<a href="#">ORDER ?</a> I <a href="#">COOK ?</a>
 		</div>
-</div>
+	</div>
 
-	 
-</div>
 
- 
-    </script>
+	<div class="container">
+		<div id="dish" class="four columns">
+			<img src="#"></img>
+			<h5>DISH 1</h5>
+			<p>Name cook</p>
+			<p>RATING</p>
+		</div>
+		<div id="dish" class="four columns">
+			<img src="#"></img>
+			<h5>DISH 2</h5>
+			<p>Name cook</p>
+			<p>RATING</p>
+		</div>
+		<div id="dish" class="four columns">
+			<img src="#"></img>
+			<h5>DISH 3</h5>
+			<p>Name cook</p>
+			<p>RATING</p>
+		</div>
+		<div id="dish" class="four columns">
+			<img src="#"></img>
+			<h5>DISH 4</h5>
+			<p>Name cook</p>
+			<p>RATING</p>
+		</div>
+	</div>
+	<div class="container">
+		<div id="dish" class="four columns">
+			<img src="#"></img>
+			<h5>DISH 5</h5>
+			<p>Name cook</p>
+			<p>RATING</p>
+		</div>
+		<div id="dish" class="four columns">
+			<img src="#"></img>
+			<h5>DISH 6</h5>
+			<p>Name cook</p>
+			<p>RATING</p>
+		</div>
+		<div id="dish" class="four columns">
+			<img src="#"></img>
+			<h5>DISH 7</h5>
+			<p>Name cook</p>
+		</div>
+		<div id="dish" class="four columns">
+			<img src="#"></img>
+			<h5>DISH 8</h5>
+			<p>Name cook</p>
+			<p>RATING</p>
+		</div>
+	</div>
 
-<!-- End Document
+	<div class="container">
+		<div id="feature" class="eight columns">
+			<img src="images/fast.jpg" alt="fast" width="220" height="113">
+			<h5>FEATURE 1</h5>
+			<p>Name cook</p>
+		</div>
+		<div id="feature" class="eight columns">
+			<img src="images/foundation.jpg" alt="foundation" width="220"
+				height="113">
+			<h5>FEATURE 2</h5>
+			<p>Name cook</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div id="steps" class="one-third column">
+			<img src="#"></img>
+			<h5>STEP 1</h5>
+			<p>Explanation</p>
+		</div>
+		<div id="steps" class="one-third column">
+			<img src="#"></img>
+			<h5>STEP 2</h5>
+			<p>Explanation</p>
+		</div>
+		<div id="steps" class="one-third column">
+			<img src="#"></img>
+			<h5>STEP 3</h5>
+			<p>Explanation</p>
+		</div>
+	</div>
+
+	<div id="map" class="container-100">
+		<div class="sixteen columns">
+			<label for="regularInput">Regular Input</label> <input type="text"
+				id="regularInput" />
+		</div>
+	</div>
+
+
+	</div>
+
+
+	</script>
+
+	<!-- End Document
 ================================================== -->
 </body>
 </html>
